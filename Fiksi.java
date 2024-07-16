@@ -39,7 +39,8 @@ public class Fiksi extends Buku {
     @Override
     public void tampilInfo() {
         super.tampilInfo();
-        System.out.println("Sub-jenis\t: " + subJenis);
-        System.out.println("Genre\t\t: " + genre);
+        // System.out.println("Sub-jenis\t: " + subJenis);
+        // System.out.println("Genre\t\t: " + genre);
+        System.out.printf("%s: %s", subJenis, genre);
     }
 }

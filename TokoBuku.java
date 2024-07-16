@@ -15,7 +15,7 @@ public class TokoBuku {
     
     public static void main(String[] args) {
         while (true) {
-            System.out.println("\n=== MENU ===");
+            System.out.println("\n===== MENU =====");
             System.out.println("1. Tambah Buku");
             System.out.println("2. Tampilkan Daftar Buku");
             System.out.println("3. Ubah Buku");
@@ -92,11 +92,15 @@ public class TokoBuku {
         if (daftarBuku.isEmpty()) {
             System.out.println("Daftar buku kosong.");
         } else {
-            System.out.println("\n=== DAFTAR BUKU ===");
+            System.out.println("\n===== DAFTAR BUKU NON-FIKSI DAN FIKSI =====");
+            System.out.println("====================================================================================================================================================");
+            System.out.println("  ID BUKU  |                   JUDUL                  |       PENGARANG      | TAHUN TERBIT |         HARGA        |    SUBJEK / SUBJENIS: GENRE    ");
+            System.out.println("====================================================================================================================================================");
             for (Buku buku : daftarBuku) {
                 buku.tampilInfo();
                 System.out.println(); // baris kosong antar buku
             }
+            System.out.println("====================================================================================================================================================");
         }
     }
     
