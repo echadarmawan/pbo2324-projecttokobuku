@@ -4,7 +4,7 @@
  */
 
 /*
- * Subclass NonFiksi
+ * Subclass Fiksi
  */
 public class Fiksi extends Buku {
     private String subJenis;
