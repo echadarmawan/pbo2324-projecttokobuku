@@ -128,7 +128,7 @@ public class TokoBuku {
                     System.out.print("Subjek\t\t: ");
                     ((NonFiksi) buku).setSubjek(keyboard.nextLine());
                 } else if (buku instanceof Fiksi) {
-                    System.out.println("Sub jenis\t: ");
+                    System.out.print("Sub jenis\t: ");
                     ((Fiksi) buku).setSubJenis(keyboard.nextLine());
                     System.out.print("Genre\t\t: ");
                     ((Fiksi) buku).setGenre(keyboard.nextLine());
