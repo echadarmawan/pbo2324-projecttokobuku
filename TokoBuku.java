@@ -49,18 +49,7 @@ public class TokoBuku {
     }
     
     private static void tambahBuku() {
-        System.out.print("ID Buku\t\t: ");
-        String id = keyboard.nextLine();
-        System.out.print("Judul\t\t: ");
-        String judul = keyboard.nextLine();
-        System.out.print("Pengarang\t: ");
-        String pengarang = keyboard.nextLine();
-        System.out.printf("Tahun Terbit\t: ");
-        int tahunTerbit = keyboard.nextInt();
-        System.out.print("Harga\t\t: Rp");
-        double harga = keyboard.nextDouble();
-        keyboard.nextLine(); // membersihkan newline di buffer
-        
+        // Memilih Jenis Buku
         System.out.println("Jenis Buku:");
         System.out.println("1. Non Fiksi");
         System.out.println("2. Fiksi");
@@ -68,6 +57,23 @@ public class TokoBuku {
         int jenis = keyboard.nextInt();
         keyboard.nextLine(); // membersihkan newline di buffer
         
+        String id = "", judul = "", pengarang = "";
+        int tahunTerbit = 0;
+        double harga = 0;
+        if (jenis > 0 && jenis < 3) {
+            System.out.print("ID Buku\t\t: ");
+            id = keyboard.nextLine();
+            System.out.print("Judul\t\t: ");
+            judul = keyboard.nextLine();
+            System.out.print("Pengarang\t: ");
+            pengarang = keyboard.nextLine();
+            System.out.printf("Tahun Terbit\t: ");
+            tahunTerbit = keyboard.nextInt();
+            System.out.print("Harga\t\t: Rp");
+            harga = keyboard.nextDouble();
+            keyboard.nextLine(); // membersihkan newline di buffer
+        }
+
         if (jenis == 1) {
             System.out.print("Subjek\t\t: ");
             String subjek = keyboard.nextLine();
@@ -93,14 +99,14 @@ public class TokoBuku {
             System.out.println("Daftar buku kosong.");
         } else {
             System.out.println("\n===== DAFTAR BUKU NON-FIKSI DAN FIKSI =====");
-            System.out.println("====================================================================================================================================================");
-            System.out.println("  ID BUKU  |                   JUDUL                  |       PENGARANG      | TAHUN TERBIT |         HARGA        |    SUBJEK / SUBJENIS: GENRE    ");
-            System.out.println("====================================================================================================================================================");
+            System.out.println("==============================================================================================================================================================");
+            System.out.println("  ID BUKU  |                   JUDUL                  |            PENGARANG           | TAHUN TERBIT |         HARGA        |    SUBJEK / SUBJENIS: GENRE    ");
+            System.out.println("==============================================================================================================================================================");
             for (Buku buku : daftarBuku) {
                 buku.tampilInfo();
                 System.out.println(); // baris kosong antar buku
             }
-            System.out.println("====================================================================================================================================================");
+            System.out.println("==============================================================================================================================================================");
         }
     }
     

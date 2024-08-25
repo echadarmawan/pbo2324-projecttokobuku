@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+package tokobuku;
 
 /*
  * Superclass Buku
@@ -69,11 +66,6 @@ public class Buku {
     
     // Method untuk menampilkan informasi buku
     public void tampilInfo() {
-        // System.out.println("ID Buku\t\t: " + idBuku);
-        // System.out.println("Judul\t\t: " + judul);
-        // System.out.println("Pengarang\t: " + pengarang);
-        // System.out.println("Tahun Terbit\t: " + tahunTerbit);
-        // System.out.printf("Harga\t\t: Rp%,.0f\n", harga);
         System.out.printf("%10s | %40s | %30s | %12d | Rp%,18.0f | ", idBuku, judul, pengarang, tahunTerbit, harga);
     }
 }
